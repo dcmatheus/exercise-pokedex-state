@@ -1,6 +1,7 @@
 import React from 'react';
 import Pokemon from './Pokemon';
 import Button from './button';
+import './pokedex.css';
 
 class Pokedex extends React.Component {
   constructor(props) {
@@ -60,14 +61,14 @@ class Pokedex extends React.Component {
         
         <div className='nav'>
         <Button
-          className="pokedex-button"
+          className="return-button"
           onClick={() => this.returnPokemon()}
           disabled={ this.state.pokemonIndex <= 0 }
         >
           Pokemon anterior
         </Button>
         <Button
-          className="pokedex-button"
+          className="next-button"
           onClick={() => this.nextPokemon()}
           disabled={ this.state.pokemonIndex >= (filteredPokemons.length - 1)}
         >
